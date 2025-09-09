@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simbaa Veterinary clinic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Simbaa veterinary Clinic</h1>
+            <p>Please fill out our survey form.</p>
+        </header>
+
+        <form id="surveyform" action="#">
+            <fieldset>
+                <legend>Owner & Pet Information</legend>
+                <div class="petandownerinfo">
+                    <label for="ownername">Your Name:</label>
+                    <input type="text" id="owner'sname" name="ownerName" required>
+                </div>
+                <div class="petandownerinfo">
+                    <label for="pet'sname">Pet's Name:</label>
+                    <input type="text" id="pet'sname" name="petName" required>
+                </div>
+                <div class="petandownerinfo">
+                    <label for="petage">Pet's Age (in years):</label>
+                    <input type="number" id="pet'sage" name="petAge" min="0" required>
+                </div>
+            </fieldset>
+            <fieldset>
+    <legend>Services Used</legend>
+    <p>Please select all the services you have used with us:</p>
+    <div id="services">
+        <div class="checkbox-group">
+            <input type="checkbox" id="service-checkup" name="service" value="Annual Check-up">
+            <label for="service-checkup">Annual Check-up</label>
+        </div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="service-vaccinations" name="service" value="Vaccinations">
+            <label for="service-vaccinations">Vaccinations</label>
+        </div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="service-dental" name="service" value="Dental Cleaning">
+            <label for="service-dental">Dental Cleaning</label>
+        </div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="service-grooming" name="service" value="Grooming">
+            <label for="service-grooming">Grooming</label>
+        </div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="service-spay-neuter" name="service" value="Spay/Neuter">
+            <label for="service-spay-neuter">Spay/Neuter</label>
+        </div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="service-emergency" name="service" value="Emergency Care">
+            <label for="service-emergency">Emergency Care</label>
+        </div>
+    </div>
+  <fieldset>
+                <legend>Additional Feedback</legend>
+                <div class="petandownerinfo">
+                    <label for="comments">Any other comments or suggestions?</label>
+                    <textarea id="comments" name="comments" rows="4"></textarea>
+                </div>
+            </fieldset>
+
+            <button type="submit">Submit Survey</button>
+        </form>
+        
+        <div id="survey-summary" class="summary-hidden">
+            <h2>Thank You for Your Feedback!</h2>
+            <p id="summary-message"></p>
+            <div id="summary-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>
